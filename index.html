@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qalin Education</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #4CAF50;
+            --accent-color: #FF6B6B;
+            --dark-bg: #0a192f;
+            --darker-bg: #060d1b;
+            --card-bg: #112240;
+            --text-color: #ffffff;
+            --navy-light: #172a45;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--darker-bg) !important;
+            border-bottom: 1px solid var(--navy-light);
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: var(--text-color);
+        }
+
+        .navbar-light .navbar-toggler {
+            background-color: var(--text-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--navy-light);
+            color: var(--text-color);
+        }
+
+        .bg-gradient-primary {
+            position: relative;
+            background: linear-gradient(to right, var(--dark-bg), var(--darker-bg));
+        }
+
+        .bg-gradient-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(108, 99, 255, 0.1), transparent);
+        }
+
+        .btn-custom {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(6, 13, 27, 0.5);
+            border-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--darker-bg) !important;
+            border-top: 1px solid var(--navy-light);
+        }
+
+        h2, h3, h4, h5 {
+            color: var(--text-color);
+        }
+
+        .card-title {
+            color: var(--primary-color);
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-effect:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color);
+        }
+        
+        .me-2 {
+            margin-right: 0.5rem;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-text {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Different colors for different social media on hover */
+        .fa-facebook:hover {
+            color: #1877f2;
+        }
+
+        .fa-twitter:hover {
+            color: #1da1f2;
+        }
+
+        .fa-instagram:hover {
+            color: #e4405f;
+        }
+
+        .fa-linkedin:hover {
+            color: #0077b5;
+        }
+
+        .fa-youtube:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" href="#">
+                <i class="fas fa-graduation-cap"></i> Qalin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-primary py-5 text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Enhance Your Skills</h1>
+                    <p class="lead mb-4">Learn modern technology skills and adapt to the job market demands.</p>
+                    <button class="btn btn-light btn-lg px-4">View Courses</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://img.freepik.com/free-vector/online-learning-isometric-concept_1284-17947.jpg" alt="Hero Image" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-5" id="courses">
+        <div class="container">
+            <h2 class="text-center mb-5">Most Popular Courses</h2>
+            <div class="row g-4">
+                <!-- Course Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Learn how to create modern websites and web applications.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$99</span>
+                                <button class="btn btn-custom">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/free-vector/mobile-app-development-background_23-2148688949.jpg" class="card-img-top" alt="Mobile Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text">Create innovative mobile applications for iOS and Android.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$89</span>
+                                <button class="btn btn-custom">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/free-vector/digital-marketing-team-with-laptops-light-bulb-marketing-team-metrics-marketing-team-lead-responsibilities-concept_335657-258.jpg" class="card-img-top" alt="Digital Marketing">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Master digital marketing strategies and techniques.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$79</span>
+                                <button class="btn btn-custom">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>Qalin Education</h5>
+                    <p>Modern education for the future.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-address-card me-2"></i>Contact</h5>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>Email: info@qalin.com<br>
+                        <i class="fas fa-phone me-2"></i>Tel: +252 61 XXXXXXX
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Follow Us</h5>
+                    <div class="social-icons d-flex gap-4 mt-3">
+                        <a href="#" class="text-white fs-4" title="Facebook">
+                            <i class="fab fa-facebook hover-effect"></i>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <a href="#" class="text-white fs-4" title="Twitter">
+                            <i class="fab fa-twitter hover-effect"></i>
+                            <span class="social-text">Twitter</span>
+                        </a>
+                        <a href="#" class="text-white fs-4" title="Instagram">
+                            <i class="fab fa-instagram hover-effect"></i>
+                            <span class="social-text">Instagram</span>
+                        </a>
+                        <a href="#" class="text-white fs-4" title="LinkedIn">
+                            <i class="fab fa-linkedin hover-effect"></i>
+                            <span class="social-text">LinkedIn</span>
+                        </a>
+                        <a href="#" class="text-white fs-4" title="YouTube">
+                            <i class="fab fa-youtube hover-effect"></i>
+                            <span class="social-text">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
